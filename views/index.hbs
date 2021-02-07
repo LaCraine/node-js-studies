@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="./../assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Hello World v1</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia excepturi autem ex nulla est porro, commodi esse at reiciendis praesentium architecto fuga labore! Maxime saepe ullam ducimus autem id.</p>
+    {{!-- przekazane z node --}}
+    <h1>{{pageTitle}}</h1> 
+    <h3>{{subTitle}}</h3>
+    <h3>{{subsubTitle}}</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia excepturi autem ex nulla est porro,
+        commodi esse at reiciendis praesentium architecto fuga labore! Maxime saepe ullam ducimus autem id.</p>
+
+    <input type="text" id="example">
+    <button id="action">Klik</button>
+    <p id="text"></p>
+
+
+    <script src="./../js/func.js"></script>
 </body>
+
 </html>
