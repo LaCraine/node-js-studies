@@ -1,20 +1,13 @@
-const http = require("http");
+const express = require("express");
 
-//handler na wyświetlanie - end odpowiada za wyświetlanie czegoś na stronie
-
-const handler = (request, response) => {
-    response.end("<div> Hello World </div>")
-    console.log("sample message")
-}
-
-
-const server = http.createServer(handler);
 const port = 3000;
+const app = express();
 
+app.get("/", (req, res) => {
+    res.send("Hello world")
+})
 
-
-//obsługa błędu
-server.listen(port, (err) => {
-   if (err) { return console.log("błąd", err)} 
-   console.log(`Serwer działa na porcie ${port}`)
-});
+app.listen(port, (err) => {
+    if (err) { return console.log(err)}
+    console.log("Działa na porcie ", port)
+})
